@@ -6,17 +6,16 @@ namespace _16._03._23
     {
         static void Main(string[] args)
         {
-            int[] array = { 8, -1, 4, 16, -5, 3 }; //Нахождение максимального элемента и его индекса.
-            int max = array[0]; 
-            for (int i = 1; i < array.Length; i++)
+            //дан курс рубля за каждый день в феврале месяца(случайным образом) зачсчитать средний курс рубля, максимальный курс рубля и день с максимальным курсом,минимальнй курс рубля и день с минимальным курсом.
+            double[] array = new double[28];
+            Random random = new Random();
+              //  Random random=new Random();
+            for(int i=0;i<array.Length;i++)
             {
-                if (array[i] > max)
-                {
-                    max = array[i];
-                }
-
+                array[i] = 55 + 10 *random.NextDouble();
+                Console.WriteLine($"array[{i}]={array[i]}");
             }
-            Console.WriteLine($"max={max}");
+            Console.Read();
         }
     }
 }
